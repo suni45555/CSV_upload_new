@@ -11,3 +11,12 @@ entity ZPTM_KBAN_MATCFG {
     CHANGED_BY         : String(12);   // Changed By
     CHANGED_ON         : Date;         // Changed On
 }
+
+entity AUTOMATED_KANBAN_REPLENISHMENT {
+    key MATERIAL_NUMBER          : String(40);
+    key MATERIAL_DOCUMENT_NUMBER : String(40);
+    QUANTITY_IN_ENTRY_UNIT       : Decimal(18,3);
+    REQUESTED_QUANTITY           : Decimal(18,3);
+    KANBAN_CONTROL_CYCLE         : String(20);
+    AVAILABLE_STORAGE_BIN        : String(40);
+}
